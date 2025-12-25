@@ -6,18 +6,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        # Updated to v4 for better performance and security
         uses: actions/checkout@v4
 
       - name: Build APK
-        # FIXED: Changed from 'website-to-apk-action' to 'web-to-app-action'
-        uses: darkshredder/web-to-app-action@v1
+        # FIXED: Using the specific stable version v1.1.2
+        uses: darkshredder/web-to-app-action@v1.1.2
         with:
           app-name: "MyVastuTool"
-          build-folder-path: "./" # Where your index.html is located
+          build-folder-path: "./" 
           
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-app-apk
-          path: apk/ # The folder where the action saves the APK
+          path: apk/
