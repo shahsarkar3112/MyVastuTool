@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build APK
-        uses: darkshredder/website-to-apk-action@v1.1
+        uses: uses: darkshredder/web-to-app-action@v1
         with:
           app-name: "MyVastuTool"
           build-folder-path: "./" # Where your index.html is located
