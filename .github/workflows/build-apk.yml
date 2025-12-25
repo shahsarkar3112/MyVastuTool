@@ -9,14 +9,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build APK
-        # FIXED: Using the specific stable version v1.1.2
+        # FIXED: Correct repository name and version
         uses: darkshredder/web-to-app-action@v1.1.2
         with:
-          app-name: "MyVastuTool"
+          app-name: "VastuAnalysisTool"
           build-folder-path: "./" 
-          
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: my-app-apk
+          name: VastuTool-APK
           path: apk/
